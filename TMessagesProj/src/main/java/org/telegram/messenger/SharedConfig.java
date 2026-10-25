@@ -233,6 +233,10 @@ public class SharedConfig {
     public static int badPasscodeTries;
     public static byte[] passcodeSalt = new byte[0];
     public static boolean appLocked;
+    public static boolean ghostMode;
+    public static boolean ghostMode;
+    public static boolean ghostMode;
+    
     public static int autoLockIn = 60 * 60;
 
     public static boolean saveIncomingPhotos;
