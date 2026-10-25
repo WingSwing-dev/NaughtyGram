@@ -236,7 +236,7 @@ public class SharedConfig {
     public static boolean ghostMode;
     public static boolean ghostMode;
     public static boolean ghostMode;
-    
+
     public static int autoLockIn = 60 * 60;
 
     public static boolean saveIncomingPhotos;
@@ -377,8 +377,8 @@ public class SharedConfig {
 
     static {
         loadConfig();
+        ghostMode = preferences.getBoolean("ghostMode", false);
     }
-
     public static class ProxyInfo {
         public @NonNull ProxySettings settings;
         public long ping;
