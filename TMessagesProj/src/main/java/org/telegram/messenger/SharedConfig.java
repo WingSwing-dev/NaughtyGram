@@ -515,6 +515,7 @@ public class SharedConfig {
     }
 
     public static void loadConfig() {
+        ghostMode = preferences.getBoolean("ghostMode", false);e
         synchronized (sync) {
             if (configLoaded || ApplicationLoader.applicationContext == null) {
                 return;
@@ -1868,7 +1869,13 @@ public class SharedConfig {
         SharedPreferences pref = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
         pref.edit().putBoolean("drawActionBarShadow", drawActionBarShadow);
     }
+    public static void toggleGhostMode() {
+                ghostMode = !ghostMode;
+                        android.content.SharedPreferences preferences = org.telegram.messenger.ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", android.content.Context.MODE_PRIVATE);
+                                preferences.edit().putBoolean("ghostMode", ghostMode).apply();
+                                    }
+
+    }
 
 
 
-}
